@@ -86,8 +86,8 @@ app.post("/result", function (req, res) {
                 });
 
             // ------------ CONSULTANDO NA TABELA COD -----------------------------------------------------
-
-            var resultsNome = await bd.sql(`SELECT * FROM tbs_cod_nome WHERE cod = ${codigos.nomeCod}`).execute()                        
+                
+            var resultsNome = await bd.sql(`SELECT * FROM tbs_cod_nome WHERE cod = ${codigos.nomeCod}`).execute()  
             var resultsSobrenome = await bd.sql(`SELECT * FROM tbs_cod_sobrenome where cod = ${codigos.sobrenomeCod}`).execute()
             var resultsEmail = await bd.sql(`SELECT * FROM tbs_cod_email where cod = ${codigos.emailCod}`).execute()
 
